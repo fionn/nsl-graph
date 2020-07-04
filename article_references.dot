@@ -1,0 +1,161 @@
+#!/usr/bin/env dot -Tsvg -O
+
+digraph "Hong Kong National Security Law" {
+
+    //label="The Law of the People’s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region"
+
+    compound=true;
+    ordering=out;
+    rankdir=LR;
+    bgcolor="#ffffff95";
+    dpi=128;
+
+    graph [fontsize=10 fontname=Helvetica compound=true];
+    node [shape=box style=filled fillcolor=white fontname=Times];
+
+    subgraph cluster_chapter_1 {
+        label = "Chapter I General Principles";
+        "Article 1";
+        "Article 2";
+        "Article 3";
+        "Article 4";
+        "Article 5";
+        "Article 6";
+    }
+
+    subgraph cluster_chapter_2 {
+        label = "Chapter II The Duties and the Government Bodies of the Hong Kong Special Administrative Region for Safeguarding National Security";
+
+        subgraph cluster_ch_2_part_1 {
+            label = "Part 1 Duties";
+            "Article 7";
+            "Article 8";
+            "Article 9";
+            "Article 10";
+            "Article 11";
+        }
+
+        subgraph cluster_ch_2_part_2 {
+            label = "Part 2 Government Bodies";
+            "Article 12";
+            "Article 13";
+            "Article 14";
+            "Article 15";
+            "Article 16";
+            "Article 17";
+            "Article 18";
+            "Article 19";
+        }
+    }
+
+    subgraph cluster_chapter_3 {
+        label = "Chapter III Offences and Penalties";
+
+        subgraph cluster_part_1 {
+            label = "Part 1 Secession";
+            "Article 20" [comment="Definition of secession"];
+            "Article 21";
+        }
+
+        subgraph cluster_part_2 {
+            label = "Part 2 Subversion";
+            "Article 22" [comment="Definition of subversion"];
+            "Article 23";
+        }
+
+        subgraph cluster_part_3 {
+            label = "Part 3 Terrorist Activities";
+            "Article 24";
+            "Article 25";
+            "Article 26";
+            "Article 27";
+            "Article 28";
+        }
+
+        subgraph cluster_part_4 {
+            label = "Part 4 Collusion with a Foreign Country or with External Elements to Endanger National Security";
+            "Article 29";
+            "Article 30";
+        }
+
+        subgraph cluster_part_5 {
+            label = "Part 5 Other Provisions on Penalty";
+            "Article 31";
+            "Article 32";
+            "Article 33";
+            "Article 34";
+            "Article 35";
+        }
+        subgraph cluster_part_6 {
+            label = "Part 6 Scope of Application";
+            "Article 36";
+            "Article 37";
+            "Article 38";
+            "Article 39";
+            "Article 40";
+        }
+    }
+
+    subgraph cluster_chapter_4 {
+        label = "Chapter IV Jurisdiction, Applicable Law and Procedure";
+        "Article 41";
+        "Article 42";
+        "Article 43";
+        "Article 44";
+        "Article 45";
+        "Article 46";
+        "Article 47";
+        "Article 48" [comment="Establishing China's local security office in Hong Kong"];
+    }
+
+    subgraph cluster_chapter_5 {
+        label = "Chapter V Office for Safeguarding National Security of the Central People’s Government in the Hong Kong Special Administrative Region";
+        "Article 49";
+        "Article 50";
+        "Article 51";
+        "Article 52";
+        "Article 53";
+        "Article 54";
+        "Article 55" [comment="China's ability to exercise jurisdiction"];
+        "Article 56";
+        "Article 57";
+        "Article 58";
+        "Article 59";
+        "Article 60";
+        "Article 61";
+    }
+
+    subgraph cluster_chapter_6 {
+        label = "Chapter VI Supplementary Provisions";
+        "Article 62";
+        "Article 63";
+        "Article 64";
+        "Article 65";
+        "Article 66";
+    }
+
+    "Article 13" -> "Article 16";
+    "Article 16" -> "Article 48";
+    "Article 18" -> "Article 48";
+
+    "Article 21" -> "Article 20";
+    "Article 23" -> "Article 22";
+    "Article 25" -> "Article 24";
+
+    //"Article 28" -> "Article 28" [lhead=cluster_part_3];
+
+    "Article 29" -> "Article 29";
+
+    "Article 30" -> "Article 20";
+    "Article 30" -> "Article 22";
+
+    "Article 40" -> "Article 55";
+
+    "Article 43" -> "Article 43";
+
+    "Article 56" -> "Article 55";
+    "Article 57" -> "Article 55";
+    "Article 57" -> "Article 56";
+    "Article 58" -> "Article 55";
+    "Article 59" -> "Article 55";
+}
