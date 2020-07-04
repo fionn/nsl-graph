@@ -15,15 +15,15 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build SVG
-      run: dot article_references.dot -T svg -O
+      run: dot nsl.dot -T svg -O
 
     - name: Build PNG
-      run: dot article_references.dot -T png -O
+      run: dot nsl.dot -T png -O
 
     - name: Build GIF
-      run: dot article_references.dot -T gif -O
+      run: dot nsl.dot -T gif -O
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
       with:
-          path: article_references.dot.*
+          path: nsl.dot.*

@@ -1,4 +1,4 @@
-#!/usr/bin/env dot -Tsvg -O
+#!/usr/bin/env -S dot -Tsvg -O
 
 digraph "Hong Kong National Security Law" {
 
